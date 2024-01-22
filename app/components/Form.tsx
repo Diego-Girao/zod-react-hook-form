@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
-import { FormData } from "@/types"
+import { FormData, UserSchema } from "@/types"
+import { zodResolver } from "@hookform/resolvers/zod"
 import FormField from "./FormField"
 
 function Form() {
@@ -8,7 +9,9 @@ function Form() {
 		handleSubmit,
 		formState: { errors },
 		setError,
-	} = useForm<FormData>()
+	} = useForm<FormData>({
+		resolver: zodResolver(UserSchema),
+	})
 
 	const onSubmit = async (data: FormData) => {
 		console.log("SUCCESS", data)
@@ -49,7 +52,7 @@ function Form() {
 				/>
 				<FormField
 					type="password"
-					placeholder="Password"
+					placeholder="Password (min 8 characters)"
 					name="password"
 					register={register}
 					error={errors.password}
