@@ -10,6 +10,7 @@ function Form() {
 		handleSubmit,
 		formState: { errors },
 		setError,
+		reset,
 	} = useForm<FormData>({
 		resolver: zodResolver(UserSchema),
 	})
@@ -18,6 +19,7 @@ function Form() {
 		try {
 			const response = await axios.post("/api/form", data) // Make a POST request
 			const { errors = {} } = response.data // Destructure the 'errors' property from the response data
+			console.log(data)
 
 			// Define a mapping between server-side field names and their corresponding client-side names
 			const fieldErrorMapping: Record<string, ValidFieldNames> = {
@@ -40,6 +42,7 @@ function Form() {
 					message: errors[fieldWithError],
 				})
 			}
+			reset()
 		} catch (error) {
 			alert("Submitting form failed!")
 		}
