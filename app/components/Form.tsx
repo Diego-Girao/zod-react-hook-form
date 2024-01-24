@@ -3,8 +3,10 @@ import { FormData, UserSchema, ValidFieldNames } from "@/types"
 import axios from "axios"
 import { zodResolver } from "@hookform/resolvers/zod"
 import FormField from "./FormField"
+import { useState } from "react"
 
 function Form() {
+	const [success, setSuccess] = useState(false)
 	const {
 		register,
 		handleSubmit,
@@ -19,6 +21,7 @@ function Form() {
 		try {
 			const response = await axios.post("/api/form", data) // Make a POST request
 			const { errors = {} } = response.data // Destructure the 'errors' property from the response data
+			setSuccess(true)
 			console.log(data)
 
 			// Define a mapping between server-side field names and their corresponding client-side names
@@ -43,6 +46,11 @@ function Form() {
 				})
 			}
 			reset()
+
+			const hideSuccessMessage = () => {
+				setSuccess(false)
+			}
+			setTimeout(hideSuccessMessage, 3000)
 		} catch (error) {
 			alert("Submitting form failed!")
 		}
@@ -95,6 +103,28 @@ function Form() {
 					register={register}
 					error={errors.confirmPassword}
 				/>
+				<div className="mt-3">
+					{success && (
+						<p className="font-semibold text-xs text-green-500 flex items-center gap-1 sm:text-sm">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								className="icon icon-tabler icon-tabler-check"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								strokeWidth="2"
+								stroke="currentColor"
+								fill="none"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+							>
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M5 12l5 5l10 -10" />
+							</svg>
+							Form has been submitted successfully
+						</p>
+					)}
+				</div>
 				<button type="submit" className="submit-button">
 					Submit
 				</button>
