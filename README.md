@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div id="top"></div>
+
+<br />
+<div align="center">
+   <img src="https://github.com/Diego-Girao/zod-react-hook-form/assets/70491871/440ef92a-2cfb-4758-afa5-63f6d8fb8a69" alt="Logo">
+ </a>
+
+<h3 align="center">📋️ How to Validate Forms with Zod and React-Hook-Form</h3>
+ <p align="center">
+
+  [Live Project 🌐️](https://zod-n-react-hook-form.netlify.app)
+   |
+   [Code 👨‍💻️](https://github.com/Diego-Girao/zod-react-hook-form)
+   |
+   [Article 📋️](https://www.freecodecamp.org/news/react-form-validation-zod-react-hook-form)
+
+ </p>
+   
+</div>
+
+## 👨‍💻️ Introduction
+
+I was looking for examples of React Forms and validation when I came across this great article. I decided to use it as a guide and reference.
+
+### 👏️ Special thanks to: ✨️[Gift Uhiene](https://github.com/Giftea), the article was written by her.
+
+This is the GitHub repository for the
+[How to Validate Forms with Zod and React-Hook-Form](https://www.freecodecamp.org/news/react-form-validation-zod-react-hook-form)
+tutorial. 
+
+In this tutorial, you will learn how to build a type-safe form using [React-Hook-Form](https://github.com/react-hook-form/react-hook-form) for form management and [Zod](https://github.com/colinhacks/zod) for both client-side and server-side validation.
 
 ## Getting Started
+To get started, follow the steps below:
 
-First, run the development server:
+1. Clone the `main` branch of this repository:
+
+```bash
+git clone https://github.com/Diego-Girao/zod-react-hook-form.git
+```
+
+2. Run the command below to install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+All set! 🚀️
