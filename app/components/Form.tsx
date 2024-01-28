@@ -59,7 +59,7 @@ function Form() {
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<div className="grid col-auto">
-				<h1 className="text-3xl font-bold mb-4">Zod 'N React-Hook-Form</h1>
+				<h1 className="text-3xl font-bold mb-3">Zod 'N React-Hook-Form</h1>
 				<FormField
 					type="email"
 					placeholder="johndoe@mail.com"
@@ -103,7 +103,7 @@ function Form() {
 					register={register}
 					error={errors.confirmPassword}
 				/>
-				<div className="mt-3">
+				<div className="mt-2">
 					{success && (
 						<p className="font-semibold text-xs text-green-500 flex items-center gap-1 sm:text-sm">
 							<svg
