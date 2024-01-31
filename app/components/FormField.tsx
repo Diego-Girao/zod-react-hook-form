@@ -10,6 +10,7 @@ const FormField: React.FC<FormFieldProps> = ({
 }) => (
 	<>
 		<input
+			className="p-4 w-full rounded-md"
 			type={type}
 			placeholder={placeholder}
 			{...register(name, { valueAsNumber })}
