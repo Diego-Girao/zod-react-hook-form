@@ -57,9 +57,29 @@ function Form() {
 	}
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
-			<div className="grid col-auto">
-				<h1 className="text-3xl font-bold mb-3">Zod 'N React-Hook-Form</h1>
+		<form className="w-full" onSubmit={handleSubmit(onSubmit)}>
+			<div className="flex justify-between items-center p-4 bg-slate-300 text-purple-800 mb-4 rounded-md">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					className="lucide lucide-terminal-square size-7 md:size-10"
+				>
+					<path d="m7 11 2-2-2-2" />
+					<path d="M11 13h4" />
+					<rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+				</svg>
+				<h1 className="text-xl text-nowrap md:text-3xl font-bold">
+					Work Xperience
+				</h1>
+			</div>
+			<div className="grid col-auto md:grid-cols-2 gap-4 w-full">
 				<FormField
 					type="email"
 					placeholder="johndoe@mail.com"
@@ -125,10 +145,13 @@ function Form() {
 						</p>
 					)}
 				</div>
-				<button type="submit" className="submit-button">
-					Submit
-				</button>
 			</div>
+			<button
+				type="submit"
+				className="submit-button shadow-md shadow-black p-2 w-full md:w-1/2 rounded-md bg-purple-400 text-purple-950 text-xl"
+			>
+				Submit
+			</button>
 		</form>
 	)
 }
