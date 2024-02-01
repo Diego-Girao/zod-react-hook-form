@@ -4,6 +4,7 @@ import axios from "axios"
 import { zodResolver } from "@hookform/resolvers/zod"
 import FormField from "./FormField"
 import { useState } from "react"
+import { Button } from "@/components/ui/button"
 
 function Form() {
 	const [success, setSuccess] = useState(false)
@@ -66,9 +67,9 @@ function Form() {
 					viewBox="0 0 24 24"
 					fill="none"
 					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="2"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 					className="lucide lucide-terminal-square size-7 md:size-10"
 				>
 					<path d="m7 11 2-2-2-2" />
@@ -146,12 +147,9 @@ function Form() {
 					)}
 				</div>
 			</div>
-			<button
-				type="submit"
-				className="submit-button shadow-md shadow-black p-2 w-full md:w-1/2 rounded-md bg-purple-400 text-purple-950 text-xl"
-			>
+			<Button type="submit" className="shadow-md shadow-purple-800 text-xl">
 				Submit
-			</button>
+			</Button>
 		</form>
 	)
 }
