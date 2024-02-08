@@ -4,7 +4,7 @@ import Form from "./components/Form"
 
 function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-12">
+		<main className="flex min-h-screen flex-col items-center justify-between p-12 bg-slate-200">
 			<Form />
 		</main>
 	)

@@ -6,12 +6,12 @@ export const UserSchema: ZodType<FormData> = z
 		email: z.string().email(),
 		githubUrl: z
 			.string()
-			.url()
-			.includes("github.com", { message: "Invalid Github URL!" }),
+			.url({ message: "Invalid Github url" })
+			.includes("github.com"),
 		linkedinUrl: z
 			.string()
-			.url()
-			.includes("linkedin.com", { message: "Invalid Linkedin URL!" }),
+			.url({ message: "Invalid Linkedin url" })
+			.includes("linkedin.com"),
 		yearsOfExperience: z
 			.number({
 				required_error: "required field",
@@ -21,7 +21,7 @@ export const UserSchema: ZodType<FormData> = z
 			.max(10),
 		password: z
 			.string()
-			.min(8, { message: "Password is too short" })
+			.min(6, { message: "Password is too short" })
 			.max(20, { message: "Password is too long" }),
 		confirmPassword: z.string(),
 	})
