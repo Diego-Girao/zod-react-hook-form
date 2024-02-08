@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Acme } from "next/font/google"
 import "./globals.css"
+import { Toaster } from "@/components/ui/sonner"
 
 const acme = Acme({ subsets: ["latin"], weight: "400" })
 
@@ -17,6 +18,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={acme.className}>{children}</body>
+			<Toaster position="top-right" richColors />
 		</html>
 	)
 }
