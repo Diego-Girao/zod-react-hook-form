@@ -10,12 +10,14 @@ const FormField: React.FC<FormFieldProps> = ({
 }) => (
 	<>
 		<input
-			className="p-4 w-full rounded-md"
+			className="p-4 w-full rounded-md text-purple-700 ring-1"
 			type={type}
 			placeholder={placeholder}
 			{...register(name, { valueAsNumber })}
 		/>
-		{error && <span className="error-message">{error.message}</span>}
+		{error && (
+			<span className="error-message text-red-500">{error.message}</span>
+		)}
 	</>
 )
 
